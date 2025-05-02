@@ -2,17 +2,19 @@
 
 enum State
 {
-        CLOSED,
+        CLOSED_STATE,
         CLOSE_PRESSED,
         CLOSING,
+        LOCKING,
         LOCKED,
         LOCK_PRESSED,
+        UNLOCKING,
 
-        OPEN,
+        OPEN_STATE,
         OPEN_PRESSED,
         OPENING,
 
-        IDLE,
+        IDLE_STATE,
         ERROR,
         _, // all state
 };

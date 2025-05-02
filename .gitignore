@@ -5,3 +5,6 @@
 .vscode/ipch
 
 .idea
+
+cmake-build-debug
+CMakeLists.txt

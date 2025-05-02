@@ -36,18 +36,17 @@ public:
             .onEnter(BLINK_OFF, [this]()
                      {
                          digitalWrite(this->_pin, LOW);
-                         if (this->debug) Serial.printf("[%d] pin %d OFF\n\r", millis(), this->_pin);
-                     })
+                         if (this->debug) Serial.printf("[%d] pin %d OFF\n\r", millis(), this->_pin); })
             .onEnter(BLINK_ON, [this]()
                      {
                          digitalWrite(this->_pin, HIGH);
-                         if (this->debug) Serial.printf("[%d] pin %d ON\n\r", millis(), this->_pin);
-                     });
+                         if (this->debug) Serial.printf("[%d] pin %d ON\n\r", millis(), this->_pin); });
 
         blinks.push_back(this);
     }
 
-    uint8_t pin() {
+    uint8_t pin()
+    {
         return _pin;
     }
 
