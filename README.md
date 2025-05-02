@@ -24,14 +24,10 @@ Ce projet simule le contrôle d’une porte de garage automatisée à l’aide d
 ## Matériel utilisé
 
 - 3 LED (Rouge, Orange, Verte)
-- 3 Résistances 100Ω
-- 1 Bouton poussoir (control)
+- 1 Résistance 100Ω
+- 2 Boutons poussoir (`control`, `reset`)
 - 2 Capteurs de fin de course (`sw_open`, `sw_close`)
-
-#### *Bonus :*
-- *1 Bouton poussoir (reset, après l'état d'erreur)*
-- *4 LED (Cyan, Bleu, Mauve, Jaune) (LED de débug)*
-- *1 Résistances 100Ω*
+- 1 Keypad
 
 ## Diagramme d'état-transition
 
@@ -44,3 +40,20 @@ Le fonctionnement de la porte est régi par un **diagramme d'état-transitions**
 - **Wokwi** : simulation du câblage
 - **Diagramme** : fichier image `.png` du diagramme d’état
 
+## Bonus : Mot de passe de déverrouillage
+
+- La saisie d'un mot de passe est attendu lors du verrouillage de la porte.  
+  **Feedback visuel** via les LED :
+  - 🔴 **Rouge continue** : attente de la saisie du mot de passe
+  - 🟠 **Orange clignotant** : prise en compte de l'input
+  - 🟢 **Vert clignotant** : mot de passe enregisté (appuyer sur `*` pour validé)
+  - 🔴 **Rouge clignotant** : porte verrouillée
+
+- Le mot de passe est requise pour déverrouiller de la porte.  
+  **Feedback visuel** via les LED :
+  - 🔴 **Rouge continue** : attente de la saisie du mot de passe
+  - 🟠 **Orange clignotant** : prise en compte de l'input
+  - 🟢 **Vert clignotant** : mot de passe correcte (appuyer sur `*` pour validé). *Retour a l'état FERMÉ 🔴 **Rouge continue***
+  - 🔴 **Rouge clignotant** : mot de passe incorrect, porte verrouillée
+
+#### Retrouvez la version de base sur la branche `default`
