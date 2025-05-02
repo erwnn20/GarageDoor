@@ -38,12 +38,9 @@ void setup()
         Button::setupAll();
 
         Led::setupAll();
-        // Led::switchOnAll();
-        // delay(1500);
-        // Led::switchOffAll();
 
         fsm
-            .setDebugTransition(true)
+            //     .setDebugTransition(true)
             //     .setDebugEnter(true)
             //     .setDebugExit(true)
             //     .setDebugAll(true)
