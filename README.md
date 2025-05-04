@@ -56,4 +56,11 @@ Le fonctionnement de la porte est régi par un **diagramme d'état-transitions**
   - 🟢 **Vert clignotant** : mot de passe correcte (appuyer sur `*` pour validé). *Retour a l'état FERMÉ 🔴 **Rouge continue***
   - 🔴 **Rouge clignotant** : mot de passe incorrect, porte verrouillée
 
+
+
+### Clone du github :
+ ```
+ git clone https://github.com/erwnn20/GarageDoor.git
+ cd GarageDoor/
+ ```
 #### Retrouvez la version de base sur la branche `default`
